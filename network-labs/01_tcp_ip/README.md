@@ -56,6 +56,17 @@ docker-compose:
 
 ---
 
+## 🔄 Flujo de comunicación
+
+1. El cliente (browser/curl) realiza una request HTTP
+2. Se establece una conexión TCP con el servidor (3-way handshake)
+3. El servidor recibe la request en el puerto 8000
+4. FastAPI procesa la solicitud
+5. Se envía una respuesta HTTP al cliente
+6. La conexión puede cerrarse o mantenerse (keep-alive)
+
+---
+
 ## 🧪 Pruebas realizadas
 
 ### 🔹 1. Acceso desde localhost
@@ -141,12 +152,40 @@ Resultado:
 
 ---
 
+## 🛠 Problemas encontrados
+
+### Error con Docker COPY
+
+Problema:
+Docker no encontraba el archivo requirements.txt
+
+Causa:
+El archivo estaba dentro de la carpeta app/ pero Docker lo buscaba en el contexto raíz
+
+Solución:
+Se movió el archivo a la raíz del proyecto o se ajustó la ruta en el Dockerfile
+
+---
+
+## 🌐 Conceptos aplicados
+
+- Modelo cliente-servidor
+- Protocolo TCP
+- Protocolo HTTP
+- Uso de puertos
+- Direccionamiento IP básico
+- Contenerización de servicios
+
+---
+
 ## 📌 Conclusiones
 
 - Se comprendió el modelo cliente-servidor en la práctica
 - Se verificó el uso de puertos en la comunicación
 - Se observó el establecimiento de conexiones TCP
 - Se validó el acceso tanto local como en red
+
+---
 
 ## 🚀 Próximos pasos
 
