@@ -48,7 +48,7 @@ Resultado:
 * Respuestas HTTP 200 OK
 * Comunicación exitosa entre contenedores
 
-   ![Comunicación entre contenedores](../images/comunicacion_contenedores.png)
+   ![Comunicación entre contenedores](./images/comunicacion_contenedores.png)
 
 * logs mostrando responses
 
@@ -66,9 +66,9 @@ Resultado:
 
 * Cada contenedor tiene una IP interna
 * Ambos están en la misma red
-    ![Listado de redes](../images/network_ls.png)
+    ![Listado de redes](./images/network_ls.png)
 
-   ![Inspección de red](../images/network_inspect.png)
+   ![Inspección de red](./images/network_inspect.png)
 
 * JSON con IPs
 
